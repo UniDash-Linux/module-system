@@ -1,20 +1,19 @@
-{ computer, username }:
+{ hostname, username }:
 { config, pkgs, ... }:
 {
 ###########
 # Imports #
 #######################################################################
-  imports =
-    [
-      (import ./services.nix {
-        inherit username;
-        hostname = computer.hostname;
-      })
-      ./programs.nix
-      ./issue
-      ./polkit
-      ./boot.nix
-    ];
+  imports = [
+    (import ./services.nix {
+      inherit username;
+      hostname = hostname;
+    })
+    ./programs.nix
+    ./issue
+    ./polkit
+    ./boot.nix
+  ];
 ##########
 # System #
 #######################################################################
@@ -59,7 +58,6 @@
 #######################################################################
   users.users.${username} = {
     isNormalUser = true;
-    shell = pkgs.fish;
     extraGroups = [
       "docker"
       "networkmanager"
@@ -68,12 +66,6 @@
       "corectrl"
     ];
     initialPassword = "admin";
-  };
-##################
-# Virtualisation #
-#######################################################################
-  virtualisation = {
-    docker.enable = true;
   };
 #######################################################################
 }

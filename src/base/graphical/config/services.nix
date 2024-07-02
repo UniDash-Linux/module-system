@@ -11,7 +11,6 @@
     tumbler.enable = true;
     openssh.enable = true;
     mpd.enable = true;
-    blueman.enable = true;
     fwupd.enable = true;
     ## ------------------------------------------------------------- ##
     pipewire = {
@@ -64,9 +63,6 @@
   };
   # ------------------------------------------------------------------ #
   systemd = {
-    user.services = {
-      opentabletdriver.enable = true;
-    };
     ## -------------------------------------------------------------- ##
     targets = {
       sleep.enable = false;

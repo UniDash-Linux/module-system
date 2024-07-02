@@ -32,8 +32,6 @@ in {
       enableSSHSupport = true;
     };
     ## ------------------------------------------------------------- ##
-    fish.enable = true;
-    ## ------------------------------------------------------------- ##
     corectrl.enable = true;
   };
 #########
@@ -45,11 +43,6 @@ in {
 # Package #
 #######################################################################
   environment = {
-    shells = with pkgs; [ fish ];
-    variables.EDITOR = "ide";
-    unixODBCDrivers = with pkgs; [
-      unixODBCDrivers.msodbcsql18
-    ];
     systemPackages = with pkgs; [
       ### Utils --------------------------------------------------- ###
       git
@@ -100,12 +93,6 @@ in {
       heroic
       mangohud
     ];
-  };
- # ------------------------------------------------------------------ #
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
   };
 #######################################################################
 }

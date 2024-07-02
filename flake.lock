@@ -21,74 +21,13 @@
         "type": "github"
       }
     },
-    "hosts": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1719456570,
-        "narHash": "sha256-FS9+w+9QPBd6hCtX7C5x/xm4nGCA0lOtYgjefkQNbbg=",
-        "owner": "StevenBlack",
-        "repo": "hosts",
-        "rev": "0f8be09978187ba0e4eab2a9e0dcde88f358f1dc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "StevenBlack",
-        "repo": "hosts",
-        "type": "github"
-      }
-    },
-    "nixos-hardware": {
-      "locked": {
-        "lastModified": 1719681865,
-        "narHash": "sha256-Lp+l1IsREVbz8WM35OJYZz8sAH0XOjrZWUXVB5bJ2qg=",
-        "owner": "NixOS",
-        "repo": "nixos-hardware",
-        "rev": "a59f00f5ac65b19382617ba00f360f8bc07ed3ac",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixos-hardware",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 0,
-        "narHash": "sha256-RoxIr/fbndtuKqulGvNCcuzC6KdAib85Q8gXnjzA1dw=",
-        "path": "/nix/store/88ii9yk46c0acdrv14lgvpxn0a23afv8-source",
-        "type": "path"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs-unstable": {
-      "locked": {
-        "lastModified": 1719690277,
-        "narHash": "sha256-0xSej1g7eP2kaUF+JQp8jdyNmpmCJKRpO12mKl/36Kc=",
+        "lastModified": 1719838683,
+        "narHash": "sha256-Zw9rQjHz1ilNIimEXFeVa1ERNRBF8DoXDhLAZq5B4pE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "2741b4b489b55df32afac57bc4bfd220e8bf617e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1719707984,
-        "narHash": "sha256-RoxIr/fbndtuKqulGvNCcuzC6KdAib85Q8gXnjzA1dw=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "7dca15289a1c2990efbe4680f0923ce14139b042",
+        "rev": "d032c1a6dfad4eedec7e35e91986becc699d7d69",
         "type": "github"
       },
       "original": {
@@ -98,56 +37,10 @@
         "type": "github"
       }
     },
-    "revolunixpkgs": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "virtual-machines": "virtual-machines"
-      },
-      "locked": {
-        "lastModified": 1719878109,
-        "narHash": "sha256-WsxkH5R2j9lEJPFUiQtbMVvNtUlQqGtsKIMpCvl9QjU=",
-        "owner": "RevoluNix",
-        "repo": "revolunixpkgs",
-        "rev": "d65920ae93482c61094231aba9d8fdfa0c366386",
-        "type": "github"
-      },
-      "original": {
-        "owner": "RevoluNix",
-        "repo": "revolunixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "hosts": "hosts",
-        "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs_2",
-        "nixpkgs-unstable": "nixpkgs-unstable",
-        "revolunixpkgs": "revolunixpkgs"
-      }
-    },
-    "virtual-machines": {
-      "inputs": {
-        "nixpkgs": [
-          "revolunixpkgs",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1719876981,
-        "narHash": "sha256-5JgH1ckWJHRWnKr44ymvyoNskcDp/IzqgVcqzQrHRS8=",
-        "owner": "RevoluNix",
-        "repo": "module-virtual-machines",
-        "rev": "b12f69ca4e4d329fd0bfcd66e1d191dfd97680e9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "RevoluNix",
-        "repo": "module-virtual-machines",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

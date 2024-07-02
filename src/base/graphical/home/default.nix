@@ -18,7 +18,6 @@
     ./libreoffice
 
     ## System ------------------------------------------------------ ##
-    ./fish
     ./rofi
     ./waybar
     ./lockscreen
@@ -38,9 +37,6 @@
     homeDirectory = "/home/${username}";
     ## ------------------------------------------------------------- ##
     stateVersion = "24.05";
-    sessionVariables = {
-      EDITOR = "ide";
-    };
     sessionPath = [
       "/home/${username}/.local/bin/"
       "/home/${username}/.npm-global/"
