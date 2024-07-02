@@ -21,7 +21,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## ------------------------------------------------------------- ##
-    hosts.url = "github:StevenBlack/hosts";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     ## ------------------------------------------------------------- ##
     home-manager = {
@@ -37,7 +36,6 @@
     nixpkgs-unstable,
     nixos-hardware,
     home-manager,
-    hosts,
     revolunixpkgs,
     ...
   }: let
@@ -87,14 +85,6 @@
     ## ------------------------------------------------------------- ##
     default_modules = [
       revolunixpkgs.nixosModules.virtualMachines
-      hosts.nixosModule {
-        networking.stevenBlackHosts = {
-          blockFakenews = true;
-          blockGambling = true;
-          blockPorn = false;
-          blockSocial = true;
-        };
-      }
     ];
 ##########
 # Config #

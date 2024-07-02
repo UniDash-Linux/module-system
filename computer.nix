@@ -9,8 +9,6 @@
       inherit computer username;
     })
     ## ------------------------------------------------------------- ##
-    ./hardware/${computer.hostname}.nix
-    ## ------------------------------------------------------------- ##
     home-manager.nixosModules.home-manager {
       home-manager = {
         useGlobalPkgs = true;
