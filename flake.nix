@@ -6,7 +6,7 @@
   outputs = inputs @ { self, nixpkgs, home-manager }: {
     configsImports.base.graphical = {
       home = ./src/base/graphical/home;
-      system = ./src/base/graphical/config;
+      system = ./src/base/graphical/system;
     };
   };
 }

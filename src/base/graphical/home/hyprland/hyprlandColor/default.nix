@@ -3,8 +3,8 @@
 #########
 # Files #
 #######################################################################
-  home.file.hyprland_color = {
-    source = ./color.conf;
+  home.file.hyprlandColor = {
+    source = ./hyprland.conf;
     target = ".config/hypr/color.conf_tmp";
     recursive = false;
   };

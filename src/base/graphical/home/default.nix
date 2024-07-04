@@ -1,4 +1,4 @@
-{ hostname, username }:
+{ username, ... }:
 { pkgs, ... }:
 {
 ###########
@@ -21,9 +21,9 @@
     ./rofi
     ./waybar
     ./lockscreen
-    ./writable_configs
+    ./writableConfigs
     ./hyprland/hyprland
-    ./hyprland/hyprland_color
+    ./hyprland/hyprlandColor
 
     ## Other-------------------------------------------------------- ##
     ./programs.nix
@@ -37,10 +37,6 @@
     homeDirectory = "/home/${username}";
     ## ------------------------------------------------------------- ##
     stateVersion = "24.05";
-    sessionPath = [
-      "/home/${username}/.local/bin/"
-      "/home/${username}/.npm-global/"
-    ];
     ## ------------------------------------------------------------- ##
     packages = with pkgs; [
       ### Settings ------------------------------------------------ ###

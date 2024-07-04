@@ -3,7 +3,7 @@
 #########
 # Files #
 #######################################################################
-  home.file.cpwrconf_configs = {
+  home.file.writableConfigs = {
     source = ./cpwrconf;
     target = ".local/bin/cpwrconf";
     recursive = false;

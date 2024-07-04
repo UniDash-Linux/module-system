@@ -4,9 +4,8 @@
 # Files #
 #######################################################################
   home.file.hyprland= {
-    source = ./src;
-    target = ".config/hypr";
-    recursive = true;
+    source = ./hyprland.conf;
+    target = ".config/hypr/hyprland.conf";
   };
 #######################################################################
 }

@@ -1,13 +1,12 @@
-{ hostname, username }:
-{ config, pkgs, ... }:
+{ hostname, ... }:
+{ ... }:
 {
 ###########
 # Imports #
 #######################################################################
   imports = [
     (import ./services.nix {
-      inherit username;
-      hostname = hostname;
+      inherit hostname;
     })
     ./programs.nix
     ./issue
@@ -53,19 +52,5 @@
   };
   # ----------------------------------------------------------------- #
   nixpkgs.config.allowUnfree = true;
-########
-# User #
-#######################################################################
-  users.users.${username} = {
-    isNormalUser = true;
-    extraGroups = [
-      "docker"
-      "networkmanager"
-      "libvirtd"
-      "wheel"
-      "corectrl"
-    ];
-    initialPassword = "admin";
-  };
 #######################################################################
 }

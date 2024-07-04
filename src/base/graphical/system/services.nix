@@ -1,5 +1,5 @@
-{ hostname, username }:
-{ config, pkgs, ... }:
+{ hostname, ... }:
+{ pkgs, ... }:
 {
 ###########
 # Systemd #
@@ -31,13 +31,7 @@
       sddm = {
         enable = true;
         wayland.enable = true;
-        autoNumlock = true;
-        autoLogin.relogin = true;
       };
-      ### --------------------------------------------------------- ###
-      defaultSession = "hyprland";
-      autoLogin.enable = true;
-      autoLogin.user = username;
     };
     ## ------------------------------------------------------------- ##
     xserver = {
@@ -128,9 +122,9 @@
       enable = true;
       powerOnBoot = true;
       input.General = {
+        Name = hostname;
         ClassicBondedOnly = false;
         IdleTimeout = 600;
-        Name = hostname;
         ControllerMode = "dual";
         FastConnectable = "true";
       };
@@ -147,7 +141,7 @@
   };
   # ------------------------------------------------------------------ #
   networking = {
-    hostName = "${hostname}";
+    hostName = hostname;
     wireless = {
       enable = true;
       userControlled.enable = true;
