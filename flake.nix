@@ -4,9 +4,15 @@
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager }: {
-    configsImports.base.graphical = {
-      home = ./src/base/graphical/home;
-      system = ./src/base/graphical/system;
+    configsImports.base = {
+      cli = {
+        home = ./src/base/cli/home;
+        system = ./src/base/cli/system;
+      };
+      graphical = {
+        home = ./src/base/graphical/home;
+        system = ./src/base/graphical/system;
+      };
     };
   };
 }
