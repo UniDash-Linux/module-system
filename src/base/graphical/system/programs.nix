@@ -53,23 +53,14 @@ in {
       curl
       zip
       unzip
-      winetricks
-      fish
-      fishPlugins.bobthefish
       killall
       bc
-      tmux
       pciutils
-      nix-direnv
-      fishPlugins.bass
-      droidcam
-      android-tools
 
       ### System -------------------------------------------------- ###
       modemmanager
       gdu
       xdotool
-      wpgtk
       swaylock-effects
       ldacbt
       coreutils
@@ -79,19 +70,11 @@ in {
       bluetuith
 
       ### Dev ----------------------------------------------------- ###
-      virt-manager
-      neovim
-      lazygit
       ide
       man-pages
       man-pages-posix
-      wireguard-tools
-      openvpn
 
       ### Game ---------------------------------------------------- ###
-      lutris
-      heroic
-      mangohud
     ];
   };
 #######################################################################

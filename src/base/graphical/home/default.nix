@@ -44,11 +44,9 @@
       rofi-mixer
       libnotify
       dunst
-      btop
       xdg-user-dirs
       acpi
       maim
-      looking-glass-client
       font-fixer
       (pkgs.callPackage ./hyprwal { })
       xorg.xhost
@@ -56,28 +54,17 @@
       linuxKernel.packages.linux_latest_libre.v4l2loopback
 
       ### Volume -------------------------------------------------- ###
-      pavucontrol
       rofi-pulse-select
       pulseaudio
 
       ### Misc ---------------------------------------------------- ###
-      krita
-      libreoffice
-      onlyoffice-bin_latest
-      gnome.file-roller
-      qpdfview
       mpc-cli
-      firefox
-      viewnior
-      cinnamon.nemo-with-extensions
       rofi-hyprshot
       rofi-power
 
       ### Utils --------------------------------------------------- ###
-      galculator
       calc
       imagemagick
-      kitty
     ];
   };
 #######################################################################
