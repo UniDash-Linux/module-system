@@ -6,21 +6,11 @@
 #######################################################################
   imports = [
     ## Config ------------------------------------------------------ ##
-    ./gtk
   
     ## Apps -------------------------------------------------------- ##
-    ./kitty
-    ./btop
-    ./tmux
-    ./libreoffice
 
     ## System ------------------------------------------------------ ##
-    ./rofi
-    ./waybar
-    ./lockscreen
     ./writableConfigs
-    ./hyprland/hyprland
-    ./hyprland/hyprlandColor
 
     ## Other-------------------------------------------------------- ##
     ./programs.nix
@@ -37,34 +27,15 @@
     ## ------------------------------------------------------------- ##
     packages = with pkgs; [
       ### Settings ------------------------------------------------ ###
-      brightnessctl
-      rofi-wayland
-      rofi-bluetooth
-      rofi-wpa
-      rofi-mixer
-      libnotify
-      dunst
       xdg-user-dirs
       acpi
-      maim
       font-fixer
-      (pkgs.callPackage ./hyprwal { })
-      xorg.xhost
-      global-fullscreen
-      linuxKernel.packages.linux_latest_libre.v4l2loopback
 
       ### Volume -------------------------------------------------- ###
-      rofi-pulse-select
-      pulseaudio
 
       ### Misc ---------------------------------------------------- ###
-      mpc-cli
-      rofi-hyprshot
-      rofi-power
 
       ### Utils --------------------------------------------------- ###
-      calc
-      imagemagick
     ];
   };
 #######################################################################
