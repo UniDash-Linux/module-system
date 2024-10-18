@@ -17,6 +17,9 @@ main() {
     echo ${BACKGROUNDS} | cut -d ' ' -f $((1 + RANDOM % NUMBERS_OF_BACKGROUNDS))
   )
 
+  rm ~/.config/background-noblur.png
+  ln -s ~/.config/background/${WALPAPER} ~/.config/background-noblur.png
+
   convert \
     ~/.config/background/${WALPAPER} \
     -filter Gaussian -blur 0x32 \
@@ -26,20 +29,20 @@ main() {
   wpg -A ${WALPAPER}
   wpg -s ${WALPAPER}
   source ~/.cache/wal/colors.sh
-  cp ~/.cache/wal/colors-kitty.conf ~/.config/kitty/colors-kitty.conf 
 
   # Replace color with #
   FILES=(
-    ~/.config/rofi/themes/pywal.rasi
     ~/.config/rofi/applets/type-5/style-3.rasi
-    ~/.config/waybar/style.css
   )
 
   for FILE in ${FILES[@]}; do
     sed -i \
       -e "s/{{ background }}/${background}/g" \
       -e "s/{{ foreground }}/${foreground}/g" \
+      -e "s/{{ color0 }}/${color2}/g" \
       -e "s/{{ color1 }}/${color2}/g" \
+      -e "s/{{ color8 }}/${color1}/g" \
+      -e "s/{{ color15 }}/${color3}/g" \
       -e "s/{{ color2 }}/${color1}/g" \
       -e "s/{{ color3 }}/${color3}/g" \
       -e "s/{{ color4 }}/${color4}/g" ${FILE} &
@@ -49,7 +52,6 @@ main() {
   source <(sed "s/#//g" ~/.cache/wal/colors.sh)
 
   FILES=(
-    ~/.config/hypr/color.conf
     ~/.local/bin/lockscreen
   )
 
@@ -57,18 +59,18 @@ main() {
     sed -i \
       -e "s/{{ background }}/${background}/g" \
       -e "s/{{ foreground }}/${foreground}/g" \
+      -e "s/{{ color0 }}/${color2}/g" \
       -e "s/{{ color1 }}/${color2}/g" \
+      -e "s/{{ color8 }}/${color1}/g" \
+      -e "s/{{ color15 }}/${color3}/g" \
       -e "s/{{ color2 }}/${color1}/g" \
       -e "s/{{ color3 }}/${color3}/g" \
       -e "s/{{ color4 }}/${color4}/g" ${FILE} &
   done
 
   pkill -f swaybg &
-  pkill -f waybar
 
-  swaybg -m fill -i ~/.config/background/${WALPAPER} &
   hyprctl reload &
-  waybar &
   cp ~/.cache/wal/colors-kitty.conf ~/.config/kitty/colors-kitty.conf &
 }
 

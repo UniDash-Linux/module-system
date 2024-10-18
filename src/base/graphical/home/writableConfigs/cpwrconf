@@ -15,13 +15,7 @@ npm set prefix ~/.npm-global
 
 # Copy writable config
 CONFIGS_TO_COPY=(
-  ~/.config/VencordDesktop/VencordDesktop
   ~/.config/libreoffice
-  ~/.config/kitty
-  ~/.config/rofi
-  ~/.config/waybar
-  ~/.local/bin/lockscreen
-  ~/.config/hypr/color.conf
 )
 
 for CONFIG_PATH in ${CONFIGS_TO_COPY[@]}; do

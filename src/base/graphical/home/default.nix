@@ -20,7 +20,7 @@
     ./lockscreen
     ./writableConfigs
     ./hyprland/hyprland
-    ./hyprland/hyprlandColor
+    ./wal
 
     ## Other-------------------------------------------------------- ##
     ./programs.nix

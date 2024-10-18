@@ -3,10 +3,10 @@
 #########
 # Files #
 #######################################################################
-  home.file.lockscreen_configs = {
-    source = ./lockscreen;
-    target = ".local/bin/lockscreen";
-    recursive = false;
+  home.file.wal = {
+    source = ./src;
+      target = ".config/wal";
+    recursive = true;
   };
 #######################################################################
 }

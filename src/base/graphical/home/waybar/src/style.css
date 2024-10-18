@@ -1,3 +1,5 @@
+@import url("~/.cache/wal/colors.css");
+
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: Material Design Icons, JetBrainsMono Nerd Font, Iosevka Nerd Font;
@@ -7,8 +9,8 @@
 #custom-power-menu,
 #custom-launcher,
 #clock {
-  color: {{ background }};
-  background-color: {{ foreground }};
+  color: var(--background);
+  background-color: var(--foreground);
   margin-top: 3px;
 }
 
@@ -42,7 +44,7 @@ label:focus,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  background-color: {{ color1 }};
+  background-color: var(--color1);
 }
 
 #custom-vm,
@@ -165,11 +167,11 @@ window#waybar,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  color: {{ background }};
+  color: var(--background);
 }
 
 window#waybar {
-  background-color: {{ background }};
+  background-color: var(--background);
   transition-property: background-color;
   border-radius: 0 0 10px 10px;
   transition-duration: 0.5s;
