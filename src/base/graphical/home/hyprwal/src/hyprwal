@@ -5,6 +5,7 @@ main() {
   rm -rf ~/.cache &
   rm -rf ~/.config/wpg/schemes/* &
   rm -rf ~/.background &
+  for i in $(find ~/.config/wpg/templates/); do wpg -ta $i; done
 
   BACKGROUNDS=$(ls ~/.config/background/ | cut -d ' ' -f 1)
   NUMBERS_OF_BACKGROUNDS=0;
