@@ -5,7 +5,7 @@
 #######################################################################
   home.file.wal = {
     source = ./src;
-      target = ".config/wpg/templates";
+      target = ".config/wal/templates_tmp";
     recursive = true;
   };
 #######################################################################

@@ -1,4 +1,4 @@
-@import url("~/.cache/wal/colors.css");
+@import url("../../.cache/wal/colors-waybar.css");
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
@@ -9,8 +9,8 @@
 #custom-power-menu,
 #custom-launcher,
 #clock {
-  color: var(--background);
-  background-color: var(--foreground);
+  color: @background;
+  background-color: @foreground;
   margin-top: 3px;
 }
 
@@ -44,7 +44,7 @@ label:focus,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  background-color: var(--color1);
+  background-color: @color1;
 }
 
 #custom-vm,
@@ -167,11 +167,11 @@ window#waybar,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  color: var(--background);
+  color: @background;
 }
 
 window#waybar {
-  background-color: var(--background);
+  background-color: @background;
   transition-property: background-color;
   border-radius: 0 0 10px 10px;
   transition-duration: 0.5s;

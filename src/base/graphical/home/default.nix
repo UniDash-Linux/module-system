@@ -19,7 +19,7 @@
     ./waybar
     ./lockscreen
     ./writableConfigs
-    ./hyprland/hyprland
+    ./hyprland
     ./wal
 
     ## Other-------------------------------------------------------- ##
