@@ -8,16 +8,15 @@
 
 #custom-power-menu,
 #custom-launcher,
+#tray,
 #clock {
   color: @background;
   background-color: @foreground;
-  margin-top: 3px;
 }
 
 #custom-vm,
 #workspaces,
 #workspaces button,
-#tray,
 #custom-lock,
 #tray > .needs-attention,
 tooltip,
@@ -78,8 +77,18 @@ label:focus,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  margin: 5px 0;
   padding: 0 16px 0 0;
+  margin: 3px 0;
+  border: solid @background;
+  border-width: 2px 0px 2px 0px;
+}
+
+#custom-power-menu {
+  margin-right: 3px;
+}
+
+#custom-launcher {
+  margin-left: 3px;
 }
 
 #custom-power-menu,
@@ -101,7 +110,6 @@ label:focus,
 #tray > .needs-attention,
 tooltip,
 label:focus,
-#cpu,
 #memory,
 #custom-media,
 #mode,
@@ -118,15 +126,6 @@ label:focus,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.default {
-  margin-right: 3px;
-}
-
-#custom-power-menu {
-  margin-right: 5px;
-}
-
-#custom-launcher {
-  margin-left: 5px;
 }
 
 #custom-vm,
@@ -171,26 +170,20 @@ window#waybar,
 }
 
 window#waybar {
-  background-color: @background;
+  background-color: rgba(0, 0, 0, 0.5);
   transition-property: background-color;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 23px 23px;
   transition-duration: 0.5s;
+  padding: 5px;
 }
 
 window#waybar.hidden {
   opacity: 0.1;
 }
 
-#tray,
-#custom-launcher,
-#clock,
-#custom-lock,
 #workspaces,
-#cpu,
-#memory,
 #custom-media,
 #mode,
-#workspaces,
 #idle_inhibitor,
 #custom-power-menu,
 #custom-spotify,
@@ -204,34 +197,29 @@ window#waybar.hidden {
 #custom-weather.rainyNight,
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
-#custom-weather.default {
-  border-radius: 23px 7px 23px 7px;
-}
-
-#clock,
-#custom-lock,
-#workspaces {
+#custom-weather.default,
+#custom-launcher {
   border-radius: 20px 20px 20px 20px;
 }
 
-#custom-launcher {
-  border-radius: 7px 7px 23px 7px;
+#tray,
+#custom-launcher,
+#clock {
+  border-radius: 20px 0px 0px 20px;
+  border-width: 2px 0px 2px 2px;
 }
 
-#tray {
-  border-radius: 7px 23px 7px 23px;
-}
-
-#network {
-  border-radius: 7px 0px 0px 23px;
-}
-
-#custom-lock {
-  border-radius: 0px 23px 7px 0px;
-}
-
+#memory,
+#workspaces,
 #custom-power-menu {
-  border-radius: 7px 7px 7px 23px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+#tray,
+#custom-launcher,
+#workspaces,
+#custom-power-menu {
+  border-width: 2px 2px 2px 2px;
 }
 
 #workspaces button {
