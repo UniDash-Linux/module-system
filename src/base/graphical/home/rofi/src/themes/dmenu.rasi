@@ -9,23 +9,15 @@
 
 /*****----- Configuration -----*****/
 configuration {
-        modi:                       "drun,window";
+    modi:                       "drun,window";
     show-icons:                 true;
     display-drun:               " Appliquations";
-        drun-display-format:        "{name}";
+    drun-display-format:        "{name}";
     display-window:             " Windows";
-        window-format:              "{w} · {c} · {t}";
+    window-format:              "{w} · {c} · {t}";
 }
-/*
-configuration {
-	modi:                       "drun";
-    show-icons:                 true;
-    display-drun:               " Applications";
-	drun-display-format:        "{name}";
-}
-*/
 /*****----- Global Properties -----*****/
-@import                          "shared/colors.rasi"
+@import                          "~/.cache/wal/colors.rasi"
 @import                          "shared/fonts.rasi"
 
 /*****----- Main Window -----*****/

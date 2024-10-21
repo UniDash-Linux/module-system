@@ -29,25 +29,6 @@ main() {
   wpg -s ${WALPAPER}
   source ~/.cache/wal/colors.sh
 
-  # Replace color with #
-  FILES=(
-    ~/.config/rofi/applets/type-5/style-3.rasi
-    ~/.config/rofi/themes/shared/colors.rasi
-  )
-
-  for FILE in ${FILES[@]}; do
-    sed -i \
-      -e "s/{{ background }}/${background}/g" \
-      -e "s/{{ foreground }}/${foreground}/g" \
-      -e "s/{{ color0 }}/${color0}/g" \
-      -e "s/{{ color1 }}/${color2}/g" \
-      -e "s/{{ color2 }}/${color1}/g" \
-      -e "s/{{ color3 }}/${color3}/g" \
-      -e "s/{{ color4 }}/${color4}/g" \
-      -e "s/{{ color8 }}/${color8}/g" \
-      -e "s/{{ color15 }}/${color15}/g" ${FILE} &
-  done
-
   pkill -f swaybg &
   pkill -f waybar &
 
