@@ -11,7 +11,7 @@ copy_file() {
 }
 
 mkdir -p ~/.npm-global
-npm set prefix ~/.npm-global
+npm set prefix ~/.npm-global &
 
 # Copy writable config
 CONFIGS_TO_COPY=(
@@ -20,7 +20,7 @@ CONFIGS_TO_COPY=(
 )
 
 for CONFIG_PATH in ${CONFIGS_TO_COPY[@]}; do
-  copy_file ${CONFIG_PATH}
+  copy_file ${CONFIG_PATH} &
 done
 
 # # Copy if not exist
@@ -32,3 +32,5 @@ done
 #   [[ ! -f ${CONFIG_PATH} && ! -d ${CONFIG_PATH} ]] \
 #     && copy_file ${CONFIG_PATH}
 # done
+
+wait
