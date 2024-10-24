@@ -52,6 +52,8 @@
       xorg.xhost
       global-fullscreen
       linuxKernel.packages.linux_latest_libre.v4l2loopback
+      swayidle
+      hyprlock
 
       ### Volume -------------------------------------------------- ###
       rofi-pulse-select
