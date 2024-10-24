@@ -98,7 +98,7 @@
     },   
     "custom/lock": {
       "tooltip" : false,
-      "on-click": "lockscreen",
+      "on-click": "hyprlock",
       "format" : "",
     },
     "custom/spotify": {
