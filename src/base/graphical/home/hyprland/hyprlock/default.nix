@@ -3,7 +3,7 @@
 #########
 # Files #
 #######################################################################
-  home.file.hyprland= {
+  home.file.hyprlock = {
     source = ./hyprland.conf;
     target = ".config/hypr/hyprlock.conf";
   };
