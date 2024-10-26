@@ -3,7 +3,7 @@
     "layer": "top", // Waybar at top layer
     "modules-left": ["custom/launcher", "cpu", "memory", "custom/weather"],
     "modules-center": ["clock", "hyprland/workspaces"],
-    "modules-right": ["tray", "network", "bluetooth", "pulseaudio",  "backlight", "battery", "custom/vm", "custom/lock", "custom/power-menu"],
+    "modules-right": ["tray", "network", "bluetooth", "pulseaudio",  "backlight", "battery", "battery#bat1", "battery#bat2", "custom/vm", "custom/lock", "custom/power-menu"],
     "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
@@ -74,6 +74,44 @@
     },
     "battery": {
       "bat": "BAT0",
+      "adapter": "ADP0",
+      "interval": 60,
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "max-length": 20,
+      "format": "{icon}",
+      "format-warning": "{icon}",
+      "format-critical": "{icon}",
+      "format-charging": "",
+      "format-plugged": "󰚥", 
+
+      "format-alt": "{icon}",
+      "format-full": "󱊣", 
+      "format-icons": ["󱊡", "󱊢", "󱊣"]
+    },
+    "battery#bat1": {
+      "bat": "BAT1",
+      "adapter": "ADP0",
+      "interval": 60,
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "max-length": 20,
+      "format": "{icon}",
+      "format-warning": "{icon}",
+      "format-critical": "{icon}",
+      "format-charging": "",
+      "format-plugged": "󰚥", 
+
+      "format-alt": "{icon}",
+      "format-full": "󱊣", 
+      "format-icons": ["󱊡", "󱊢", "󱊣"]
+    },
+    "battery#bat2": {
+      "bat": "BAT2",
       "adapter": "ADP0",
       "interval": 60,
       "states": {
