@@ -70,7 +70,6 @@
     portal = {
       enable = true;
       extraPortals = with pkgs; [
-        xdg-desktop-portal-hyprland
         xdg-desktop-portal-gtk
       ];
     };
@@ -84,6 +83,8 @@
     hyprland = {
       enable = true;
       xwayland.enable = true;
+      package = pkgs.hyprland;
+      portalPackage = pkgs.xdg-desktop-portal-hyprland;
     };
   };
   # ------------------------------------------------------------------ #
