@@ -33,7 +33,7 @@
     username = "${username}";
     homeDirectory = "/home/${username}";
     ## ------------------------------------------------------------- ##
-    stateVersion = "24.05";
+    stateVersion = "24.11";
     ## ------------------------------------------------------------- ##
     packages = with pkgs; [
       ### Settings ------------------------------------------------ ###
@@ -51,7 +51,6 @@
       (pkgs.callPackage ./hyprwal { })
       xorg.xhost
       global-fullscreen
-      linuxKernel.packages.linux_latest_libre.v4l2loopback
       swayidle
       hyprlock
 
