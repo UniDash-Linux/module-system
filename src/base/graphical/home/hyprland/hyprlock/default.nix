@@ -3,10 +3,9 @@
 #########
 # Files #
 #######################################################################
-  home.file.lockscreen_configs = {
-    source = ./lockscreen;
-    target = ".local/bin/lockscreen";
-    recursive = false;
+  home.file.hyprlock = {
+    source = ./hyprland.conf;
+    target = ".config/hypr/hyprlock.conf";
   };
 #######################################################################
 }

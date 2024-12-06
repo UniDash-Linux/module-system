@@ -3,10 +3,10 @@
 #########
 # Files #
 #######################################################################
-  home.file.hyprlandColor = {
-    source = ./hyprland.conf;
-    target = ".config/hypr/color.conf_tmp";
-    recursive = false;
+  home.file.wal = {
+    source = ./src;
+      target = ".config/wal/templates_tmp";
+    recursive = true;
   };
 #######################################################################
 }

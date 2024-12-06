@@ -11,21 +11,16 @@ copy_file() {
 }
 
 mkdir -p ~/.npm-global
-npm set prefix ~/.npm-global
+npm set prefix ~/.npm-global &
 
 # Copy writable config
 CONFIGS_TO_COPY=(
-  ~/.config/VencordDesktop/VencordDesktop
   ~/.config/libreoffice
-  ~/.config/kitty
-  ~/.config/rofi
-  ~/.config/waybar
-  ~/.local/bin/lockscreen
-  ~/.config/hypr/color.conf
+  ~/.config/wal/templates
 )
 
 for CONFIG_PATH in ${CONFIGS_TO_COPY[@]}; do
-  copy_file ${CONFIG_PATH}
+  copy_file ${CONFIG_PATH} &
 done
 
 # # Copy if not exist
@@ -37,3 +32,5 @@ done
 #   [[ ! -f ${CONFIG_PATH} && ! -d ${CONFIG_PATH} ]] \
 #     && copy_file ${CONFIG_PATH}
 # done
+
+wait

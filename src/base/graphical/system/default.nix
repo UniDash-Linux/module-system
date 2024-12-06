@@ -18,10 +18,13 @@
 #######################################################################
   system = {
     copySystemConfiguration = false;
-    stateVersion = "24.05";
+    stateVersion = "24.11";
   };
   # ----------------------------------------------------------------- #
-  hardware.opentabletdriver.enable = true;
+  environment.variables = {
+    NIXOS_OZONE_WL = "y";
+  };
+  nixpkgs.config.chromium.commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland";
   # ----------------------------------------------------------------- #
   documentation.dev.enable = true;
   nix = {
