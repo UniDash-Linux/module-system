@@ -53,6 +53,7 @@
       global-fullscreen
       swayidle
       hyprlock
+      hyprpolkitagent
 
       ### Volume -------------------------------------------------- ###
       rofi-pulse-select
